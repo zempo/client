@@ -1,0 +1,53 @@
+@import "config";
+@import "utils";
+
+.dash-pg {
+  
+
+  .plant-list {
+    display:flex;
+    flex-wrap:wrap;
+  }
+  
+  .wrapper {
+    display:flex;
+    justify-content: space-between;
+    @media(max-width: 767px){
+      flex-direction:column;
+    }
+  }
+  .plants {
+    flex-grow:1;
+    flex-shrink:1;
+  }
+  .newPlant {
+    margin-left:5%;
+    @media(max-width: 767px){
+      order:-1;
+    }
+  }
+  .header {
+    display:flex;
+    justify-content:space-between;
+    button {
+      padding: 10px 20px;
+      width: 100%;
+      border-radius: 5px;
+      margin: 5px 0;
+      background-color: map-get($colors, app-darker-green);
+      color: map-get($colors, app-white);
+      @include font-size($p-font-sizes);
+      cursor: pointer;
+      &:hover {
+        background-color: map-get($colors, app-med-green);
+      }
+      &:disabled {
+        background-color: map-get($colors, app-light-green);
+        cursor: not-allowed;
+      }
+    }
+  }
+  .day {
+    margin-bottom:40px;
+  }
+}

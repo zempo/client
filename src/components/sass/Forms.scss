@@ -1,0 +1,79 @@
+@import "config";
+@import "utils";
+
+form {
+  text-align: left;
+}
+
+.form-container {
+  max-width: 400px;
+  min-height: 50vh;
+  margin: 0px auto;
+  
+
+  @include font-size($p-font-sizes);
+
+  input,
+  textarea {
+    width: 100%;
+    @include font-size($p-font-sizes);
+    padding: 10px;
+    background-color: #fff;
+    border: 2px solid map-get($colors, app-text-light);
+    border-radius: 4px;
+    transition: 90ms box-shadow ease-in-out;
+    margin-bottom: 0px;
+  }
+
+  input.error, textarea.error {
+    border: 2px solid crimson;
+  }
+
+  input:focus, textarea:focus {
+    border-color: map-get($colors, app-darker-green);
+    box-shadow: 0 0 0 3px map-get($colors, app-med-green);
+    outline: 3px solid transparent;
+  }
+
+  input:not(textarea) {
+    line-height: 1;
+    height: 2.25rem;
+  }
+
+  input + label {
+    margin-top: 2rem;
+  }
+
+  button {
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 5px;
+    margin: 5px 0;
+    background-color: map-get($colors, app-darker-green);
+    color: map-get($colors, app-white);
+    @include font-size($p-font-sizes);
+    cursor: pointer;
+    &:hover {
+      background-color: map-get($colors, app-med-green);
+    }
+    &:disabled {
+      background-color: map-get($colors, app-light-green);
+      cursor: not-allowed;
+    }
+  }
+  label {
+    @include font-size($sub-font-sizes);
+    color: map-get($colors, app-brown);
+  }
+  .errors {
+    color: crimson;
+    @include font-size($sub-font-sizes);
+    margin: 3px 0;
+  }
+}
+
+a.forgotpw {
+  text-decoration: none;
+  color: map-get($colors, app-med-green);
+  @include font-size($sub-font-sizes);
+}

@@ -1,0 +1,83 @@
+@import "config";
+@import "utils";
+
+.hero {
+  display: flex;
+  background-image: url(../hero.jpg);
+  background-size: cover;
+  min-height: 60vh;
+  color: green;
+  text-align: center;
+
+  > div {
+    margin: 0px auto;
+    display: flex column;
+  }
+  h1 {
+    @include font-size($mega-header-font-sizes);
+    font-family: $font-sub;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem 1rem 5rem;
+  }
+
+  .hero-btn {
+    @include font-size($h2-font-sizes);
+    padding: 20px 10px;
+    background-color: map-get($colors, app-darker-green);
+    border-radius: 5px;
+    color: map-get($colors, app-white);
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    top: -2.7rem;
+  }
+}
+.features,
+.mission {
+  padding: 3rem;
+}
+.features h2 {
+  @include font-size($h2-font-sizes);
+  display:flex;
+  justify-content:center;
+  padding-bottom: 2%;
+
+}
+
+.featureList {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  
+  h2 {
+    padding: 10px;
+    
+    
+  }
+
+  .feature {
+    padding: 5%;
+    min-width: 30%;
+    border: 1px solid black;
+    
+   
+  }  
+}
+
+.mission h2{
+  display:flex;
+  justify-content:center;
+  padding: 1%;
+}
+
+.mission p{
+  text-align:center;
+  padding-left: 30%;
+  padding-right:30%;
+}
+
+.mission{
+  background-image: url(../missionBG.jpg);
+  color: white;
+}

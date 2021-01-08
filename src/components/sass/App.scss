@@ -1,0 +1,46 @@
+@import "config";
+@import "utils";
+
+// IMPORTANT! You can write regular css in here!
+// Feel free to reach out if you have any questions about using sass, though
+// -zempo
+.pg {
+  background-color: map-get($colors, app-white);
+  margin: 0px auto;
+  max-width: 1400px;
+  padding:0px .5rem;
+}
+
+header {
+  margin: 0px auto;
+  max-width: 1600px;
+}
+body {
+  background-color: map-get($colors, app-white);
+  color: map-get($colors, app-text);
+  h1 {
+    @include font-size($h1-font-sizes);
+    text-transform: capitalize;
+    font-weight: 600;
+    margin: 1rem auto;
+  }
+  h2 {
+    @include font-size($h2-font-sizes);
+    font-weight: 600;
+    margin: 0.75rem auto;
+    font-family: $font-main;
+  }
+  h3 {
+    @include font-size($h3-font-sizes);
+    font-family: $font-main;
+    font-weight: 500;
+    margin: 0.75rem auto;
+  }
+  p {
+    @include font-size($p-font-sizes);
+    font-weight: 300;
+  }
+}
+footer {
+  text-align: center;
+}

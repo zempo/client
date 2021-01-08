@@ -1,0 +1,64 @@
+@import "config";
+@import "utils";
+
+nav {
+  padding: 1rem 0 2%;
+  background-color: map-get($colors, app-white);
+  .logo {
+    font-size: 1.65rem;
+    text-decoration: none;
+    color: map-get($colors, app-text);
+    font-family: $font-main;
+    svg {
+      max-height: 4rem;
+      max-width: 4rem;
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    .menu-wrapper {
+      width: 60%;
+      display: flex;
+      justify-content: flex-end;
+      .menu-center {
+        display: flex;
+        justify-content: space-around;
+      }
+      .auth-links {
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: 2rem;
+      }
+      a {
+        position: relative;
+        top: 2rem;
+        margin: auto 0.5rem;
+      }
+    }
+  }
+
+  .route-link {
+    // @include font-size($p-font-sizes);
+    color: map-get($colors, app-darker-green);
+    font-family: $font-main;
+    @include font-size($sub-font-sizes);
+    font-family: $font-sub;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .auth-link {
+    border: 1px solid map-get($colors, app-darker-green);
+    color: map-get($colors, app-darker-green);
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    @include font-size($sub-font-sizes);
+    font-family: $font-sub;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+}
